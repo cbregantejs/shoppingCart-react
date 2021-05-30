@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../contexts/CartContext';
 import { formatNumber } from '../../helpers/utils';
+import PropTypes from 'prop-types';
 
-const ProductItem = ({ product }) => {
+export const ProductItem = ({ product }) => {
 
     const { addProduct, cartItems, increase } = useContext(CartContext);
 
@@ -41,4 +42,13 @@ const ProductItem = ({ product }) => {
      );
 }
  
-export default ProductItem;
+ProductItem.propTypes = {
+    product: PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string,
+      price: PropTypes.number,
+      description: PropTypes.string,
+      category: PropTypes.string,
+      image: PropTypes.string,
+    }).isRequired
+}
