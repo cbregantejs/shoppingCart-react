@@ -6,7 +6,7 @@ import ProductsGrid from './ProductsGrid';
 const Store = () => {
     
     return ( 
-        <Layout title="Productos" description="This is the Store page" >
+        <Layout title="Productos" description="layout de la tienda" >
             <div >
                 <div className="text-center mt-5">
                     <h1>Productos</h1>
